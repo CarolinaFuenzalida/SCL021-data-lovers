@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
 * { 
   margin: 0;
   padding: 0;
@@ -7,6 +6,8 @@
   font-family: "Quicksand", sans-serif;
 }
 body, html {
+  display: flex;  /*lo pusimos para ver si podiamos ponerle height a tarjetas*/
+  flex-direction: column; 
   background: #f7f8f8;
 }
 /* todo lo del header */
@@ -17,36 +18,71 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
+  /*position: relative;*/
+  border : solid black;
+}
+#headerMainCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border : solid white;
+}
+#headerMainCont div {
+  display: flex;
+  flex-direction: row;
+  border : solid white;
 }
 #headerLogo {
   height: 110px;
   width: 110px;
-  position: absolute;
+ /* position: absolute;*/
   left: 15px;
 }
 #pageName {
-  margin: auto;
+ /* margin: auto;*/
+  display: flex;
+  flex-wrap: wrap;
   font-size: 80px;
   color: white;
   text-shadow: 2px 2px 5px #6bafbf;
 }
+#btnAboutPageCont {
+  display: flex;
+  align-items: center;
+ margin-right: 15px;
+}
+#btnAboutPage {
+  background: #ffffff;
+  height: 50px;
+  border:none;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+}
+
+#btnAboutPage:hover {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+}
+  
 /* todo lo de introduccion */ 
  .introduction{
    display: flex;
-   flex-direction:row-reverse;
+   flex-direction:row;
    align-content: center;
+   flex-wrap: wrap;
    width: 100%;
-   height: 60%;
+   height: 50%;
    background: #c5dce2;
+   border: solid black;
  }
 .introduction div{
-  width: 70%;
-  padding: 10%;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
+  flex-wrap: wrap;
+  border: solid white;
 }
 .introduction h3{
   padding: 15px;
@@ -54,17 +90,45 @@ header {
   flex-flow: wrap;
 }
 .introduction p{
+  font-size: 80%;
   display: flex;
   text-align: center;
   align-items: center;
 }
-#introductionImage {
-  width: 30%;
+#textIntroduction {
+  display:flex ;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 10%
 }
-/* botón ver peliculas */
-#btnShowMovies {
+#imageIntroduction {
+  display:flex ;
+  width: 40%;
+}
+#imageIntroduction img {
+  width: 100%;
+  height:100%; 
+  border: 0;
+}
+/*#imageIntroduction {
+  width: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  border: 0;
+}
+ #imageIntroduction img{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+ } */
+
+
+/* botón ver peliculas */
+#btnShowMovies {
+  margin: auto;
 }
 #btnShowMovies button {
   width: 300px;
@@ -72,7 +136,83 @@ header {
   margin: 20px;
   font-size: 23px;
 }
+/* Barra de filtros */ 
+#filterCont {
+  display: none;
+}
+#filterCont {
+  width: 90%;
+  height: 50px;
+  padding: 5px;
+  background: #91d3e3;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+}
+/* Tarjetas de las películas */ 
+#filmsCont{
+  display: none;
+}
+#filmsCont{
+  background-color: #cde4ea;
+  width: 90%;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto;
+}
+.filmCards {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px lightgray;
+  height: 450px;
+  width: 350px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filmTitles {
+  background-color: #91d3e3;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px lightgray;
+  width: 200px;
+  height: 50px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+ 
+}
 
+.filmPosters{
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+ .filmPosters img{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+ }
+  
 /* todo lo del footer */
 footer {
   width: 100%;
@@ -81,8 +221,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   bottom: 0;
+  margin-top: 10px;
   
 }
 #footerLogo {
@@ -93,4 +233,141 @@ footer {
 
 footer h2 {
   font-size: 15px;
+}
+/*Todo lo de Card Info */
+
+#filmsDetail {
+  width: 90%;
+  height: 95%;
+  background: #c5dce2;
+  border: solid black;
+  border-radius: 10px;
+  display: flex;
+  padding: 25px;
+  margin: auto;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*#filmsDetail div {
+  border: solid #c959;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}*/
+#detailHead {
+  width: 100%;
+  height: 35%;
+  display:flex;
+  flex-direction: row;
+  }
+#detailHead div{
+  display: flex;
+  flex-direction: column;
+  border: 5px solid green;
+  height: 100%;
+}
+
+div.filmInfoPosters{
+  background: black;
+  width: 30%;
+  height: 100%;
+}
+div.textInfo{
+  background: red;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textInfo h4 {
+  font-size: 30px;
+}
+.bodyCategories {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.bodyCategories h5{
+  font-size: 20px;
+  border: solid green;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 45px;
+  border-top-left-radius: 20px ;
+  border-top-right-radius: 20px ;
+}
+#detailBody{
+  width: 100%;
+  height: 60%;
+  display:flex;
+  flex-direction: row;
+  border: 5px solid yellow;
+}
+.charInfo {
+  background: white;
+  width: 25%;
+  height: 300px;
+  border: solid blue;
+  border-radius: 15px;                                                               
+}
+.charImg {
+  border: 2px solid purple;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.charImg img {
+  width: 100%;
+  height: 100%;
+}
+.charInfo .charText {
+  border: solid black;
+}
+
+#locInfo {
+  background: white;
+  width: 25%;
+  height: 300px;
+  border: solid blue;
+  border-radius: 15px;                                                               
+}
+.locImg {
+  border: 2px solid purple;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.locImg img {
+  width: 100%;
+  height: 100%;
+}
+#locInfo .locText {
+  border: solid black;
+}
+#vehInfo {
+  background: white;
+  width: 25%;
+  height: 300px;
+  border: solid blue;
+  border-radius: 15px;                                                               
+}
+.vehImg {
+  border: 2px solid purple;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.vehImg img {
+  width: 100%;
+  height: 100%;
+}
+#vehInfo .vehText {
+  border: solid black;
 }

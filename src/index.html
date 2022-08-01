@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,23 @@
 <body>
   <!-- Header -->
   <header>
+    <div id="headerMainCont"> 
+    <div id="headerLogoCont">  
     <img id="headerLogo" src="resources/icon.png" alt="Logo ghiblipedia">
-    <h1 id="pageName">Ghiblipedia</h1>
+    </div>
+    <div id="pageNameCont">  
+     <h1 id="pageName">Ghiblipedia</h1> 
+    </div>
+    <div id="btnAboutPageCont"> 
+     <button id="btnAboutPage">About</button>
+    </div> 
+    </div>  
   </header>
   <!-- cuerpo de la página -->
   <div class="introduction">
+    <div id="imageIntroduction"> 
+      <img id=introductionImage src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
+      </div>
     <div id=textIntroduction>
       <h3>Hayao Miyazaki</h3>
       <p>Hayao Miyazaki (宮崎 駿, Miyazaki Hayao, born January 5, 1941) is a Japanese animator, director, producer,
@@ -23,15 +35,97 @@
         a masterful storyteller and creator of Japanese animated feature films, and is widely regarded as one of the
         most accomplished filmmakers in the history of animation.</p>
     </div>
-      <img id=introductionImage src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
   </div>
   <div id="btnShowMovies">
-  <button >Ver Películas</button>
+  <button >Show Movies</button>
     </div>
+  <!-- Barra de filtros -->
+  <div id="filterCont"> 
+    <select id="filterOrder" class="filterInput">
+      <option selected value = "all"> Sort </option>
+          <option value="0">A-Z</option>
+          <option value="1">Z-A </option>
+          <option value="2">Most Recent</option>
+          <option value="3">Oldest</option>
+          <option value="4">Highest Score</option>
+          <option value="5">Lowest Score</option>
+        </select>
+    <select id="filterByDirector" class="filterInput">
+      <option selected value = "all"> Director </option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+          <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        </select>
+    <select id="filterByProducer" class="filterInput">
+          <option selected value="all">Productor</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Toshio Suzuki">Toshio Suzuki</option>
+          <option value="Toru Hara">Toru Hara</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+    </select>
+    <div> 
+      <button id="showAllCards">Show all</button>
+    </div>
+  </div>
+    <!--Tarjetas de películas-->
+  <div id="filmsCont">
+   <!-- <div id="filmPosters"> <img src="" alt="Poster de la película"></div>
+    <div><p id="filmTitles"></p></div> -->
+  </div>
+  <!-- Pop up info películas -->
+<div id="filmsDetail">
+  <div id="detailHead">
+    
+  </div> 
+  <div class ="bodyCategories">
+      <h5>Characters</h5>
+      <h5>Locations</h5>
+      <h5>Vehicles</h5>
+  </div>
+  <div id="detailBody">
+    
+      
+    </div>
+ <!--   <div id="locInfo">
+      <div class="locImg">
+        <img  src="${locations[i].img}" alt="Location picture">
+      </div>
+      <div class="locText">
+        <ul>
+          <li>Name: ${locations[i].name}</li>
+          <li>Climate: ${allFilms[i].climate}</li>
+          <li>Terrain: ${allFilms[i].terrain}</li>
+          <li>Surface Water: ${allFilms[i].surface_water}</li>
+        </ul>
+      </div>
+    </div>
+    <div id="vehInfo">
+      <div class="vehImg">
+        <img src="${vehicles[i].img}" alt="Vehicle picture">
+      </div>
+      <div class="vehText">
+        <ul>
+          <li>Name: ${vehicles[i].name}</li>
+          <li>Description: ${vehicles[i].description}</li>
+          <li>Type: ${allFilms[i].vehicle_class}</li>
+          <li>Length: ${allFilms[i].length}</li>
+        </ul>
+      </div>
+    </div> -->
+  </div> 
+</div> 
+    
   <!-- Footer -->
-  <footer>
+<footer>
     <img id="footerLogo" src="resources/icon.png" alt="Logo ghiblipedia">
-    <h2 id="footerText">Ⓒ 2022 Caro y Jacque | Laboratoria SCL021</h2>
+    <h2 id="footerText">Ⓒ 2022 Caro & Jacque | Laboratoria SCL021</h2>
   </footer>
-  <script src="main.js"></script>
+  <script type="module" src="ghibli.js"></script> 
+  <script type="module" src="data.js"></script> 
+  <script type="module" src="main.js"></script>
+  <script type="module" src="popup.js"></script>
 </body>

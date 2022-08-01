@@ -4,8 +4,8 @@ import { filterAZ, filterZA, filterMostRecent, filterOldest, filterDirector, fil
 //información
 const allFilms = data.films;
 const allCharacters = allFilms.map(f => f.people);
-const allLocations = allFilms.map(f => f.locations);
-const allVehicles = allFilms.map(f => f.vehicles);
+// const allLocations = allFilms.map(f => f.locations);
+// const allVehicles = allFilms.map(f => f.vehicles);
 const filterOrder = document.getElementById("filterOrder");
 let filmCards = '';
 
@@ -16,7 +16,7 @@ function applyFilterAZ() {
     filterAZ(allFilms);
     createCards(filterAZ);
   }
-};
+}
 //aplicar filtro Z-A
 filterOrder.addEventListener("change", applyFilterZA);
 function applyFilterZA() {
@@ -24,7 +24,7 @@ function applyFilterZA() {
     filterZA(allFilms);
     createCards(filterZA);
   }
-};
+}
 //aplicar filtro año de estreno más reciente
 filterOrder.addEventListener("change", applyFilterMostRecent);
 function applyFilterMostRecent() {
@@ -32,7 +32,7 @@ function applyFilterMostRecent() {
     filterMostRecent(allFilms);
     createCards(filterMostRecent);
   }
-};
+}
 //aplicar filtro año de estreno más antiguo
 filterOrder.addEventListener("change", applyFilterOldest);
 function applyFilterOldest() {
@@ -40,7 +40,7 @@ function applyFilterOldest() {
     filterOldest(allFilms);
     createCards(filterOldest);
   }
-};
+}
 //aplicar filtro puntaje mayor - menor
 filterOrder.addEventListener("change", applyFilterHigh);
 function applyFilterHigh() {
@@ -48,7 +48,7 @@ function applyFilterHigh() {
     filterHighScore(allFilms);
     createCards(filterHighScore);
   }
-};
+}
 //aplicar filtro puntaje menor - mayor
 filterOrder.addEventListener("change", applyFilterLow);
 function applyFilterLow() {
@@ -56,7 +56,7 @@ function applyFilterLow() {
     filterLowScore(allFilms);
     createCards(filterLowScore);
   }
-};
+}
 //Filtrar por director
 //filterBtn.addEventListener("click", applyFilterDirector);
 document.getElementById("filterByDirector").addEventListener("change", applyFilterDirector)
@@ -75,7 +75,7 @@ function applyFilterDirector() {
       document.getElementById("filmsCont").innerHTML += filmCards;
     }
   }
-};
+}
 
 //Filtrar por productor
 //filterBtn.addEventListener("click", applyFilterProducer);
@@ -95,10 +95,11 @@ function applyFilterProducer() {
       document.getElementById("filmsCont").innerHTML += filmCards;
     }
   }
-};
+}
 
 
 //iterar datos y desplayar la información (posters y títulos) en HTML
+const btnShowMovies = document.getElementById("btnShowMovies")
 btnShowMovies.addEventListener("click", createCards, { once: true });
 btnShowMovies.addEventListener("click", displayFilterBar);
 btnShowMovies.addEventListener("click", displayFilmsCont);
@@ -126,7 +127,7 @@ function createCards() {
      let popUpInfo = createPopUp(allFilms[i]);
       document.getElementById("detailHead").innerHTML ="";
       document.getElementById("detailHead").innerHTML = popUpInfo;
-     console.log(allCharacters)
+     
       //añadir for each
       let charInfo = createCharacters(allCharacters[i]);
        document.getElementById("detailBody").innerHTML= "";
@@ -134,8 +135,9 @@ function createCards() {
   
     })
   }
-)};
+)}
 //Muestra todas las peliculas desde la barra de filtros 
+const showAllCards = document.getElementById("showAllCards")
 showAllCards.addEventListener("click", createCards);
 
 

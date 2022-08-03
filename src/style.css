@@ -4,13 +4,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
+  cursor: url('resources/mouse.png'), auto;
+}
+*:active {
+  cursor: url('resources/mouse click.png'), auto;
 }
 body, html {
   display: flex;  /*lo pusimos para ver si podiamos ponerle height a tarjetas*/
   flex-direction: column; 
   background: #f7f8f8;
+  
 }
-/* todo lo del header */
+/* Todo lo del Header */
 header {
   width: 100%;
   height: 130px;
@@ -19,28 +24,23 @@ header {
   flex-direction: row;
   align-items: center;
   /*position: relative;*/
-  border : solid black;
 }
 #headerMainCont {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border : solid white;
 }
 #headerMainCont div {
   display: flex;
   flex-direction: row;
-  border : solid white;
 }
 #headerLogo {
   height: 110px;
   width: 110px;
- /* position: absolute;*/
-  left: 15px;
+  margin-left: 15px;
 }
 #pageName {
- /* margin: auto;*/
   display: flex;
   flex-wrap: wrap;
   font-size: 80px;
@@ -53,20 +53,18 @@ header {
  margin-right: 15px;
 }
 #btnAboutPage {
-  background: #ffffff;
+  background: #f4fbfb;
   height: 50px;
   border:none;
   border-radius: 5px;
   padding: 15px;
   box-shadow: inset 0 0 0 0 #54b3d6;
 }
-
 #btnAboutPage:hover {
   box-shadow: inset 100px 0 0 0 #54b3d6;
   color: white;
 }
-  
-/* todo lo de introduccion */ 
+/* Todo lo de Introducción */ 
  .introduction{
    display: flex;
    flex-direction:row;
@@ -75,22 +73,21 @@ header {
    width: 100%;
    height: 50%;
    background: #c5dce2;
-   border: solid black;
  }
 .introduction div{
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  border: solid white;
 }
 .introduction h3{
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-flow: wrap;
+  color: #292929;
 }
 .introduction p{
-  font-size: 80%;
+  font-size:calc(8px + 1vw);
   display: flex;
   text-align: center;
   align-items: center;
@@ -110,23 +107,7 @@ header {
   height:100%; 
   border: 0;
 }
-/*#imageIntroduction {
-  width: 200px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0;
-}
- #imageIntroduction img{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-wrap: wrap;
- } */
-
-
-/* botón ver peliculas */
+/* Botón ver peliculas */
 #btnShowMovies {
   margin: auto;
 }
@@ -135,6 +116,15 @@ header {
   height: 60px;
   margin: 20px;
   font-size: 23px;
+  border: #6bafbf;
+  background: #89c8d7;
+  border-radius: 5px;
+  color: #121212;
+  box-shadow: 5px 5px #c7c7c7
+}
+#btnShowMovies :hover {
+  box-shadow: inset 300px 0 0 0 #54b3d6;
+  color: white;
 }
 /* Barra de filtros */ 
 #filterCont {
@@ -142,17 +132,31 @@ header {
 }
 #filterCont {
   width: 90%;
-  height: 50px;
+  height: 60px;
   padding: 5px;
   background: #91d3e3;
-  border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: auto;
   margin-bottom: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: right;
   gap: 10px;
+}
+.filterInput {
+  background: #fafdff;
+  border-radius: 3px;
+  border: none;
+  width: 10%;
+}
+#showAllCardsCont {
+  width: 8%;
+}
+#showAllCards {
+  width: 100%;
+  background: #fafdff;
+  border-radius: 3px;
+  border: solid white;
 }
 /* Tarjetas de las películas */ 
 #filmsCont{
@@ -161,7 +165,8 @@ header {
 #filmsCont{
   background-color: #cde4ea;
   width: 90%;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 5px;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -195,9 +200,7 @@ header {
   text-align: center;
   justify-content: center;
   align-content: center;
- 
 }
-
 .filmPosters{
   width: 200px;
   height: 300px;
@@ -206,94 +209,131 @@ header {
   align-items: center;
   border: 0;
 }
+.filmPosters img:hover{
+  transform: scale(1.2);
+  box-shadow: 5px 5px 10px gray;
+  transition-duration: 1s;  
+}
  .filmPosters img{
    width: 100%;
    height: 100%;
    display: flex;
    flex-wrap: wrap;
  }
-  
-/* todo lo del footer */
+/* tTdo lo de footer */
 footer {
   width: 100%;
   height: 9%;
   background: #91d3e3;
+  color: #0d0d0d;
   display: flex;
   flex-direction: column;
   align-items: center;
   bottom: 0;
   margin-top: 10px;
-  
 }
 #footerLogo {
   height: 60px;
   width: 60px;
   margin: 2px;
 }
-
 footer h2 {
   font-size: 15px;
 }
-/*Todo lo de Card Info */
+/* Todo lo de PopUp*/
+#btnCloseCont {
+ display: flex;
+justify-content: flex-end;
+ }
+#btnClosePopUp{
+  background: white;
+  width: 5%;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+#btnClosePopUp:hover {
+  box-shadow: inset 300px 0 0 0 #54b3d6;
+  color: white;
+}
 
-#filmsDetail {
+/*Todo lo de Card Info */
+dialog {
+  margin: auto;
+  border: 0;
   width: 90%;
-  height: 95%;
+  height: 90%;
+  border-radius: 6px;
+}
+/*Contenedor Principal Card Info */
+#filmsDetail {
+  width: 100%;
+  height: 100%;
   background: #c5dce2;
-  border: solid black;
+  border: solid white;
   border-radius: 10px;
   display: flex;
   padding: 25px;
   margin: auto;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
-
-/*#filmsDetail div {
-  border: solid #c959;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-}*/
 #detailHead {
   width: 100%;
-  height: 35%;
+  height: 50%;
   display:flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap:wrap;
   }
 #detailHead div{
   display: flex;
   flex-direction: column;
-  border: 5px solid green;
   height: 100%;
 }
-
-div.filmInfoPosters{
-  background: black;
-  width: 30%;
+.filmInfoPosters{
+  width: 15%;
   height: 100%;
 }
-div.textInfo{
-  background: red;
-  width: 70%;
+.filmInfoPosters img{
+  width:100%;
+  height:100%;
+}
+.textInfo{
+  width: 85%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-left: 25px;
+  margin-top: 0;
 }
 .textInfo h4 {
-  font-size: 30px;
+  font-size: calc(10px + 1vw);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
+.textInfo p{
+  font-size: calc(5px + 1vw);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.textInfo ul{
+  font-size: calc(4px + 1vw);
+  padding: 10px;  
+}
+/*Contenedor Body Categories*/
 .bodyCategories {
   width: 100%;
-  height: 20%;
+  height: 10%;
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
 }
 .bodyCategories h5{
   font-size: 20px;
-  border: solid green;
+  border: solid #ffffff;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -303,53 +343,71 @@ div.textInfo{
   border-top-left-radius: 20px ;
   border-top-right-radius: 20px ;
 }
+/*Contenedor Characters*/
 #detailBody{
   width: 100%;
-  height: 60%;
+  height: 70%;
+  padding: 5px;
   display:flex;
+  gap: 20px;
   flex-direction: row;
-  border: 5px solid yellow;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 0;
+  margin-top: 0;
+  overflow-y: auto;
 }
 .charInfo {
-  background: white;
-  width: 25%;
-  height: 300px;
-  border: solid blue;
-  border-radius: 15px;                                                               
+  background: #dae9ec;
+  padding: 15px;
+  width: 18%;
+  height: 350px;
+  border: 0;
+  border-radius: 15px;
 }
 .charImg {
-  border: 2px solid purple;
-  width: 150px;
-  height: 150px;
+  border: 0;
+  width: 170px;
+  height: 170px;
   margin: auto;
+  padding-bottom: 10px;
 }
 .charImg img {
   width: 100%;
   height: 100%;
+  border-radius: 2px;
 }
 .charInfo .charText {
-  border: solid black;
+  padding: 10px;
+  border: 0;
+  display: flex;
 }
 
+
 #locInfo {
-  background: white;
-  width: 25%;
-  height: 300px;
-  border: solid blue;
-  border-radius: 15px;                                                               
+  background: #dae9ec;
+  padding: 15px;
+  width: 18%;
+  height: 350px;
+  border: 0;
+  border-radius: 15px;                                                              
 }
 .locImg {
-  border: 2px solid purple;
-  width: 150px;
-  height: 150px;
+   border: 0;
+  width: 170px;
+  height: 170px;
   margin: auto;
+  padding-bottom: 10px;
 }
 .locImg img {
   width: 100%;
   height: 100%;
+  border-radius: 2px;
 }
 #locInfo .locText {
-  border: solid black;
+   padding: 10px;
+  border: 0;
+  display: flex;
 }
 #vehInfo {
   background: white;

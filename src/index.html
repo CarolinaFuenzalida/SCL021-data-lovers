@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header>
+   <!-- Header -->
+   <header>
     <div id="headerMainCont"> 
     <div id="headerLogoCont">  
     <img id="headerLogo" src="resources/icon.png" alt="Logo ghiblipedia">
@@ -27,9 +27,9 @@
   <!-- cuerpo de la página -->
   <div class="introduction">
     <div id="imageIntroduction"> 
-      <img id=introductionImage src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
+      <img id="introductionImage" src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
       </div>
-    <div id=textIntroduction>
+    <div id="textIntroduction">
       <h3>Hayao Miyazaki</h3>
       <p>Hayao Miyazaki (宮崎 駿, Miyazaki Hayao, born January 5, 1941) is a Japanese animator, director, producer,
         screenwriter, author, and manga artist. A co-founder of Studio Ghibli, he has attained international acclaim as
@@ -74,20 +74,17 @@
   </div>
     <!--Tarjetas de películas-->
   <div id="filmsCont">
-   <!-- <div id="filmPosters"> <img src="" alt="Poster de la película"></div>
-    <div><p id="filmTitles"></p></div> -->
   </div>
   <!-- Pop up info películas -->
 <dialog id="popUp">
   <div id="filmsDetail">
   <div id="btnCloseCont">  <button id="btnClosePopUp">Close</button> </div>
   <div id="detailHead">
-    
   </div> 
   <div class ="bodyCategories">
       <h5 id="btnCharacters">Characters</h5>
-      <h5 id="btnLocations">Locations</h5>
-      <h5 id="btnVehicles">Vehicles</h5>
+      <h5 id="btnLocations">Locations</h5> 
+      <h5 id="btnVehicles">Vehicles</h5> 
   </div>
   <div id="detailBody">
     </div>
@@ -95,42 +92,15 @@
    </div>
     <div id="vehInfo">
    </div>
-     <!--  <div class="locImg">
-        <img  src="${locations[i].img}" alt="Location picture">
-      </div>
-      <div class="locText">
-        <ul>
-          <li>Name: ${locations[i].name}</li>
-          <li>Climate: ${allFilms[i].climate}</li>
-          <li>Terrain: ${allFilms[i].terrain}</li>
-          <li>Surface Water: ${allFilms[i].surface_water}</li>
-        </ul>
-      </div>
-    </div>
-    <div id="vehInfo">
-      <div class="vehImg">
-        <img src="${vehicles[i].img}" alt="Vehicle picture">
-      </div>
-      <div class="vehText">
-        <ul>
-          <li>Name: ${vehicles[i].name}</li>
-          <li>Description: ${vehicles[i].description}</li>
-          <li>Type: ${allFilms[i].vehicle_class}</li>
-          <li>Length: ${allFilms[i].length}</li>
-        </ul>
-      </div>
-    </div> -->
-  </div> 
-  </div> 
-</dialog> 
-    
+  </div>  
+</dialog>     
   <!-- Footer -->
 <footer>
     <img id="footerLogo" src="resources/icon.png" alt="Logo ghiblipedia">
-    <h2 id="footerText">Ⓒ 2022 Caro & Jacque | Laboratoria SCL021</h2>
+    <h2 id="footerText">Ⓒ 2022 Caro [&] Jacque | Laboratoria SCL021</h2> 
   </footer>
-  <script type="module" src="./data/ghibli/ghibli.js"></script> 
+  <script type="module" src="ghibli.js"></script> 
   <script type="module" src="data.js"></script> 
   <script type="module" src="main.js"></script>
-
 </body>
+</html>

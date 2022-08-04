@@ -220,12 +220,11 @@ header {
    display: flex;
    flex-wrap: wrap;
  }
-/* tTdo lo de footer */
+/* Todo lo de footer */
 footer {
   width: 100%;
   height: 9%;
   background: #91d3e3;
-  color: #0d0d0d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,6 +238,8 @@ footer {
 }
 footer h2 {
   font-size: 15px;
+  color: white;
+  padding-bottom: 5px;
 }
 /* Todo lo de PopUp*/
 #btnCloseCont {
@@ -383,17 +384,69 @@ dialog {
   display: flex;
 }
 
-
-#locInfo {
+#vehInfo{
+  display: none;
+}
+#vehInfo {
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 0;
+  margin-top: 0;
+  overflow-y: auto;                                                         
+}
+.vehInfo {
   background: #dae9ec;
   padding: 15px;
   width: 18%;
   height: 350px;
   border: 0;
-  border-radius: 15px;                                                              
+  border-radius: 15px;
+}
+.vehImg {
+   border: 0;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.vehImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+.vehInfo .vehText {
+  padding: 10px;
+  border: 0;
+  display: flex;
+}
+#locInfo {
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+  display:none;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 0;
+  margin-top: 0;
+  overflow-y: auto;
+}
+.locInfo {
+  background: #dae9ec;
+  padding: 15px;
+  width: 18%;
+  height: 350px;
+  border: 0;
+  border-radius: 15px;
 }
 .locImg {
-   border: 0;
+  border: 0;
   width: 170px;
   height: 170px;
   margin: auto;
@@ -404,28 +457,27 @@ dialog {
   height: 100%;
   border-radius: 2px;
 }
-#locInfo .locText {
-   padding: 10px;
+.locInfo .locText {
+  padding: 10px;
   border: 0;
   display: flex;
 }
-#vehInfo {
-  background: white;
-  width: 25%;
-  height: 300px;
-  border: solid blue;
-  border-radius: 15px;                                                               
+/* Ventana modal cuando no hay info */
+.noInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.vehImg {
-  border: 2px solid purple;
-  width: 150px;
-  height: 150px;
-  margin: auto;
+.noInfo p{
+  font-weight: 700;
 }
-.vehImg img {
-  width: 100%;
-  height: 100%;
+
+/*Responsive phone*/
+/*@media (max-width: 480px){
+  
 }
-#vehInfo .vehText {
-  border: solid black;
-}
+
+/*Responsive Tablet*/
+/*@media (max-width: 768px){
+  
+}*/

@@ -1,23 +1,21 @@
 import data from './data/ghibli/ghibli.js';
 import { filterAZ, filterZA, filterMostRecent, filterOldest, filterDirector, filterProducer, filterHighScore, filterLowScore } from './data.js';
-//import { showPopUp, charInfo } from './popup.js';
-//información
+//Información
 let allFilms = data.films;
 let allCharacters = allFilms.map(f => f.people);
 let allLocations = allFilms.map(f => f.locations);
 let allVehicles = allFilms.map(f => f.vehicles);
 const filterOrder = document.getElementById("filterOrder");
 let filmCards = [];
-console.log(allFilms)
 
-//aplicar filtro A-Z
+//Aplicar filtro A-Z
 filterOrder.addEventListener("change", applyFilterAZ);
 function applyFilterAZ() {
   if (filterOrder.value === "0") {
     let filteredInfo = filterAZ(allFilms);
     createCards(filterAZ);
-    // Crea Info de Pelicula seleccionada
-    document.querySelectorAll(".filmCards").forEach((e, i) => {
+// Crea Información de Pelicula seleccionada
+  document.querySelectorAll(".filmCards").forEach((e, i) => {
       e.addEventListener("click", () => {
         let popUpInfo = createPopUp(filteredInfo[i]);
         document.getElementById("detailHead").innerHTML = "";
@@ -36,14 +34,14 @@ function applyFilterAZ() {
     }
     )
   }
-};
-//aplicar filtro Z-A
+}
+//Aplicar filtro Z-A
 filterOrder.addEventListener("change", applyFilterZA);
 function applyFilterZA() {
   if (filterOrder.value === "1") {
     let filteredInfo = filterZA(allFilms);
     createCards(filterZA);
-    // Crea Info de Pelicula seleccionada
+//Crea Información de Pelicula seleccionada
     document.querySelectorAll(".filmCards").forEach((e, i) => {
       e.addEventListener("click", () => {
         let popUpInfo = createPopUp(filteredInfo[i]);
@@ -63,14 +61,14 @@ function applyFilterZA() {
     }
     )
   }
-};
-//aplicar filtro año de estreno más reciente
+}
+//Aplicar filtro año de estreno más reciente
 filterOrder.addEventListener("change", applyFilterMostRecent);
 function applyFilterMostRecent() {
   if (filterOrder.value === "2") {
     let filteredInfo = filterMostRecent(allFilms);
     createCards(filterMostRecent);
-    // Crea Info de Pelicula seleccionada
+//Crea Información de Pelicula seleccionada
     document.querySelectorAll(".filmCards").forEach((e, i) => {
       e.addEventListener("click", () => {
         let popUpInfo = createPopUp(filteredInfo[i]);
@@ -90,14 +88,14 @@ function applyFilterMostRecent() {
     }
     )
   }
-};
-//aplicar filtro año de estreno más antiguo
+}
+//Aplicar filtro año de estreno más antiguo
 filterOrder.addEventListener("change", applyFilterOldest);
 function applyFilterOldest() {
   if (filterOrder.value === "3") {
     let filteredInfo = filterOldest(allFilms);
     createCards(filterOldest);
-    // Crea Info de Pelicula seleccionada
+// Crea Información de Pelicula seleccionada
     document.querySelectorAll(".filmCards").forEach((e, i) => {
       e.addEventListener("click", () => {
         let popUpInfo = createPopUp(filteredInfo[i]);
@@ -117,8 +115,8 @@ function applyFilterOldest() {
     }
     )
   }
-};
-//aplicar filtro puntaje mayor - menor
+}
+//Aplicar filtro puntaje Mayor - Menor
 filterOrder.addEventListener("change", applyFilterHigh);
 function applyFilterHigh() {
   if (filterOrder.value === "4") {
@@ -145,14 +143,14 @@ function applyFilterHigh() {
     }
     )
   }
-};
-//aplicar filtro puntaje menor - mayor
+}
+//Aplicar filtro puntaje Menor - Mayor
 filterOrder.addEventListener("change", applyFilterLow);
 function applyFilterLow() {
   if (filterOrder.value === "5") {
     let filteredInfo = filterLowScore(allFilms);
     createCards(filterLowScore);
-    // Crea Info de Pelicula seleccionada
+// Crea Información de Pelicula seleccionada
     document.querySelectorAll(".filmCards").forEach((e, i) => {
       e.addEventListener("click", () => {
         let popUpInfo = createPopUp(filteredInfo[i]);
@@ -172,12 +170,10 @@ function applyFilterLow() {
     }
     )
   }
-};
+}
 //Filtrar por director
-//filterBtn.addEventListener("click", applyFilterDirector);
 document.getElementById("filterByDirector").addEventListener("change", applyFilterDirector)
 function applyFilterDirector() {
-  //let filterInput = document.getElementById("filterByDirector")
   let selectedDirector = document.getElementById("filterByDirector").value
   let filteredInfo = filterDirector(allFilms, selectedDirector)
   if (selectedDirector === "all") {
@@ -191,7 +187,7 @@ function applyFilterDirector() {
       document.getElementById("filmsCont").innerHTML += filmCards;
     }
   }
-  // Crea Info de Pelicula seleccionada
+// Crea Información de Pelicula seleccionada
   document.querySelectorAll(".filmCards").forEach((e, i) => {
     e.addEventListener("click", () => {
       let popUpInfo = createPopUp(filteredInfo[i]);
@@ -211,13 +207,10 @@ function applyFilterDirector() {
   }
   )
 }
-
 //Filtrar por productor
-//filterBtn.addEventListener("click", applyFilterProducer);
 document.getElementById("filterByProducer").addEventListener("change", applyFilterProducer)
 function applyFilterProducer() {
   let filteredInfoProducer = [];
-  // let filterInput = document.getElementById("filterByProducer")
   let selectedProducer = document.getElementById("filterByProducer").value
   if (selectedProducer === "all") {
     createCards()
@@ -231,7 +224,7 @@ function applyFilterProducer() {
       document.getElementById("filmsCont").innerHTML += filmCards;
     }
   }
-  // Crea Info de Pelicula seleccionada
+  // Crea Información de Pelicula seleccionada
   document.querySelectorAll(".filmCards").forEach((e, i) => {
     e.addEventListener("click", () => {
       let popUpInfo = createPopUp(filteredInfoProducer[i]);
@@ -250,10 +243,8 @@ function applyFilterProducer() {
     })
   }
   )
-};
-
-
-//iterar datos y desplayar la información (posters y títulos) en HTML
+}
+//Iterar datos y desplayar la información (posters y títulos) en HTML
 const btnShowMovies = document.getElementById("btnShowMovies")
 btnShowMovies.addEventListener("click", createCards, { once: true });
 btnShowMovies.addEventListener("click", displayFilterBar);
@@ -275,9 +266,7 @@ function createCards() {
   </div>`
     document.getElementById("filmsCont").innerHTML += filmCards;
   }
-
-  // Crea Info de Pelicula seleccionada
-
+// Crea Info de Pelicula seleccionada
   document.querySelectorAll(".filmCards").forEach((e, i) => {
     e.addEventListener("click", () => {
       let popUpInfo = createPopUp(allFilms[i]);
@@ -294,16 +283,11 @@ function createCards() {
       document.getElementById("vehInfo").innerHTML = vehInfo;
       document.getElementById("popUp").showModal();
     })
-  }
-  )
-};
-
-
+  })
+}
 //Muestra todas las peliculas desde la barra de filtros 
 const showAllCards = document.getElementById("showAllCards")
 showAllCards.addEventListener("click", createCards);
-
-
 //Crea los Pop Up 
 function createPopUp(allFilms) {
   return `<div class="filmInfoPosters"> 
@@ -320,8 +304,7 @@ function createPopUp(allFilms) {
       </ul>      
     </div>`
 }
-
-
+// Función para imprimir información de personajes en el Pop Up
 function createCharacters(allCharacters) {
   let htmlChar = "";
   for (let i = 0; i < allCharacters.length; i++) {
@@ -343,8 +326,11 @@ function createCharacters(allCharacters) {
   }
   return htmlChar
 }
-
+// Funcion para imprimir info de lugares en el Pop Up
 function createLocations(allLocations) {
+  if(allLocations.length === 0) {
+    return `<div class="noInfo"> <div> <img  src="resources/noInfo.png" > </div> <div> <p>No information found here!</p> </div> </div>`
+  } else {
   let htmlLoc = "";
   for (let i = 0; i < allLocations.length; i++) {
     htmlLoc = htmlLoc + `<div class="locInfo">
@@ -362,9 +348,13 @@ function createLocations(allLocations) {
     </div>`
   }
   return htmlLoc
-};
-
+  }
+}
+// Funcion para imprimir info de vehiculos en el Pop Up
 function createVehicles(allVehicles) {
+  if(allVehicles.length === 0) {
+    return `<div class="noInfo"> <div> <img  src="resources/noInfo.png" > </div> <div> <p>No information found here!</p> </div> </div>`
+  } else {
   let htmlVeh = "";
   for (let i = 0; i < allVehicles.length; i++) {
     htmlVeh = htmlVeh + ` <div class="vehInfo">
@@ -379,15 +369,35 @@ function createVehicles(allVehicles) {
           <li>Length: ${allVehicles[i].length}</li>
         </ul>
       </div>`
-  }
+   }
   return htmlVeh
-};
-
-// btnCharacters.addEventListener("click", createCharacters);
-// btnVehicles.addEventenListener("click", createLocations);
-
+  }
+}
+// Botones para mostrar Personajes, Ubicaciones y Vehiculos
+const btnCharacters = document.getElementById("btnCharacters");
+btnCharacters.addEventListener("click", btnDisplayCharacters)
+const btnLocations = document.getElementById("btnLocations");
+btnLocations.addEventListener("click", btnDisplayLocations);
+const btnVehicles = document.getElementById("btnVehicles");
+btnVehicles.addEventListener("click", btnDisplayVehicles);
+function btnDisplayCharacters () {
+  document.getElementById("detailBody").style.display = "flex";
+   document.getElementById("vehInfo").style.display="none";
+   document.getElementById("locInfo").style.display = "none";
+}
+function btnDisplayVehicles (){
+  document.getElementById("detailBody").style.display = "none";
+   document.getElementById("locInfo").style.display="none";
+   document.getElementById("vehInfo").style.display = "flex";
+}
+ function btnDisplayLocations (){
+   document.getElementById("detailBody").style.display = "none";
+   document.getElementById("vehInfo").style.display="none";
+   document.getElementById("locInfo").style.display = "flex";
+ }
 //Cierra el Pop Up
 document.getElementById("btnClosePopUp").addEventListener("click", closePopUp)
 function closePopUp() {
   document.getElementById("popUp").close();
+  btnDisplayCharacters();
 }

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Ghiblipedia</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/jpg" href="resources/SIN FONDO.png"/>
 </head>
 
 <body>
@@ -26,9 +27,9 @@
   <!-- cuerpo de la página -->
   <div class="introduction">
     <div id="imageIntroduction"> 
-      <img id="introductionImage" src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
+      <img id=introductionImage src="resources/hayaoMiyasaki.jpg" alt="Imagen de Hayao Miyasaki">
       </div>
-    <div id="textIntroduction">
+    <div id=textIntroduction>
       <h3>Hayao Miyazaki</h3>
       <p>Hayao Miyazaki (宮崎 駿, Miyazaki Hayao, born January 5, 1941) is a Japanese animator, director, producer,
         screenwriter, author, and manga artist. A co-founder of Studio Ghibli, he has attained international acclaim as
@@ -67,7 +68,7 @@
           <option value="Hayao Miyazaki">Hayao Miyazaki</option>
           <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
     </select>
-    <div> 
+    <div id="showAllCardsCont"> 
       <button id="showAllCards">Show all</button>
     </div>
   </div>
@@ -77,21 +78,24 @@
     <div><p id="filmTitles"></p></div> -->
   </div>
   <!-- Pop up info películas -->
-<div id="filmsDetail">
+<dialog id="popUp">
+  <div id="filmsDetail">
+  <div id="btnCloseCont">  <button id="btnClosePopUp">Close</button> </div>
   <div id="detailHead">
     
   </div> 
   <div class ="bodyCategories">
-      <h5>Characters</h5>
-      <h5>Locations</h5>
-      <h5>Vehicles</h5>
+      <h5 id="btnCharacters">Characters</h5>
+      <h5 id="btnLocations">Locations</h5>
+      <h5 id="btnVehicles">Vehicles</h5>
   </div>
   <div id="detailBody">
-    
-      
     </div>
- <!--   <div id="locInfo">
-      <div class="locImg">
+   <div id="locInfo">
+   </div>
+    <div id="vehInfo">
+   </div>
+     <!--  <div class="locImg">
         <img  src="${locations[i].img}" alt="Location picture">
       </div>
       <div class="locText">
@@ -116,16 +120,17 @@
         </ul>
       </div>
     </div> -->
-  </div>  
+  </div> 
+  </div> 
+</dialog> 
     
   <!-- Footer -->
 <footer>
     <img id="footerLogo" src="resources/icon.png" alt="Logo ghiblipedia">
-    <h2 id="footerText">Ⓒ 2022 Caro [&]. Jacque | Laboratoria SCL021</h2>
+    <h2 id="footerText">Ⓒ 2022 Caro & Jacque | Laboratoria SCL021</h2>
   </footer>
-  <script type="module" src="ghibli.js"></script> 
+  <script type="module" src="./data/ghibli/ghibli.js"></script> 
   <script type="module" src="data.js"></script> 
   <script type="module" src="main.js"></script>
-  <script type="module" src="popup.js"></script>
+
 </body>
-</html>

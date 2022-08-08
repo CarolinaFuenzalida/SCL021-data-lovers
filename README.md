@@ -1,14 +1,17 @@
-# Data Lovers
 
 ## Índice 
 
-* [1. About  our page] (#1-About-our-page)
-* [2. Historias de Usuario] (#2-Historias-de-usuario)
+* 1. [About our page](About-our-page)
+* 2. [Historias de Usuario](Historias-de-ususario)
+* 3. [Prototipo de Baja Fidelidad](Prototipo-de-baja-fidelidad)
+* 4. [Prototipo de Alta Fidelidad](Prototipo-de-alta-fidelidad)
+* 5. [Producto Final](Producto-final) 
 
 
 ***
 
-## 1. About Our Page 
+  
+## About Our Page :seedling: 
 
 Studio Ghibli es un estudio japonés de animación el cuál ha producido y entregado al mundo del cine varios éxitos de taquilla aclamados por la crítica, dentro de sus películas más exitosas se encuentran "El viaje de Chihiro", "El cuento de la Princesa Kaguya", "Mi vecino Totoro", entre otros.
 
@@ -22,6 +25,45 @@ En orden de hacer la página más amigable, instalamos una tabla de filtros en d
 Al pasar el puntero sobre un título se podrá hacer click para desplegar más información sobre este, dentro de la ventana se podrá elegir entre personajes, ubicaciones y vehiculos.
 
 
-## 2.Historias de Usuario 
+  
+## Historias de Usuario :bookmark_tabs:
 
+1. A mi como fan de studio ghibli me gustaría poder ver un listado de películas:
+   - [x] Crear HTML base
+   - [x] Crear CSS base
+   - [x] Extraer data
+   - [x] Mostrar, darle formato y diseño a la data
+
+3. A mi como fan de studio ghibli me gustaría poder filtrar y ordenar las películas:
+   - [x] Añadir barra de Filtros
+   - [x] Ordenar alfabeticamente
+   - [x] Ordenar por año de estreno
+   - [x] Filtrar por Director
+   - [x] Filtrar por Productor
+   - [x] Ordenar por puntaje de Rotten Tomatoes
+
+4. A mi como fan de studio ghibli me gustaría ver más información de las películas:
+   - [x] Crear ventana modal
+   - [x] Darle diseño a la ventana modal
+   - [x] Mostrar personajes
+   - [x] Mostrar directores
+   - [x] Mostrar productores
+   - [x] Mostrar ubicaciones
+   - [x] Mostrar resúmen
+   - [ ] Añadir información extra: OST
+   - [ ] Añadir información extra: Premios y/o postulaciones
+   - [ ] Añadir información extra: Datos curiosos
+
+## Prototipo de Baja Fidelidad :hammer_and_wrench:
+![](resourcesReadMe/bajaFidelidad1.jpg)
+![](resourcesReadMe/bajaFidelidad2.jpg)
+
+## Prototipo de Alta Fidelidad :computer:
+
+![](resourcesReadMe/prototipoAltaFidelidadInicio.png)
+![](resourcesReadMe/prototipoAltaFidelidadDespliegue.png)
+![](resourcesReadMe/prototipoAltaFidelidadPopUp.png)
+
+## Producto Final :sparkles:
+Puedes ver nuestro proyecto final [aquí](https://carolinafuenzalida.github.io/SCL021-data-lovers/src/index.html) o [aquí](https://jackiiem.github.io/SCL021-data-lovers/src/index.html).
 

@@ -1,11 +1,10 @@
-
 ## Índice 
 
-* 1. [About our page](About-our-page)
-* 2. [Historias de Usuario](Historias-de-ususario)
-* 3. [Prototipo de Baja Fidelidad](Prototipo-de-baja-fidelidad)
-* 4. [Prototipo de Alta Fidelidad](Prototipo-de-alta-fidelidad)
-* 5. [Producto Final](Producto-final) 
+* 1. [About our page](#about-our-page-seedling)
+* 2. [Historias de Usuario](#historias-de-usuario-bookmark_tabs)
+* 3. [Prototipo de Baja Fidelidad](#prototipo-de-baja-fidelidad-hammer_and_wrench)
+* 4. [Prototipo de Alta Fidelidad](#prototipo-de-alta-fidelidad-computer)
+* 5. [Producto Final](#producto-final-sparkles) 
 
 
 ***
@@ -55,14 +54,14 @@ Al pasar el puntero sobre un título se podrá hacer click para desplegar más i
    - [ ] Añadir información extra: Datos curiosos
 
 ## Prototipo de Baja Fidelidad :hammer_and_wrench:
-![](resourcesReadMe/bajaFidelidad1.jpg)
-![](resourcesReadMe/bajaFidelidad2.jpg)
+![](./src/resourcesReadMe/bajaFidelidad1.jpg)
+![](./src/resourcesReadMe/bajaFidelidad2.jpg/)
 
 ## Prototipo de Alta Fidelidad :computer:
 
-![](resourcesReadMe/prototipoAltaFidelidadInicio.png)
-![](resourcesReadMe/prototipoAltaFidelidadDespliegue.png)
-![](resourcesReadMe/prototipoAltaFidelidadPopUp.png)
+![](./src/resourcesReadMe/prototipoAltaFidelidadInicio.png)
+![](./src/resourcesReadMe/prototipoAltaFidelidadDespliegue.png)
+![](./src/resourcesReadMe/prototipoAltaFidelidadPopUp.png)
 
 ## Producto Final :sparkles:
 Puedes ver nuestro proyecto final [aquí](https://carolinafuenzalida.github.io/SCL021-data-lovers/src/index.html) o [aquí](https://jackiiem.github.io/SCL021-data-lovers/src/index.html).

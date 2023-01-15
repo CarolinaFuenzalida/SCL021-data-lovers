@@ -63,6 +63,12 @@ Al pasar el puntero sobre un título se podrá hacer click para desplegar más i
 ![](./src/resourcesReadMe/prototipoAltaFidelidadDespliegue.png)
 ![](./src/resourcesReadMe/prototipoAltaFidelidadPopUp.png)
 
+
+![Ghiblipedia1](https://user-images.githubusercontent.com/108352521/212523405-0ce72fdd-e136-4fb0-a3b0-31e602aba617.png)
+
+![Ghiblipedia2](https://user-images.githubusercontent.com/108352521/212523408-2e57deec-5ba8-4bdf-a7a2-fc6589964ace.png)
+
+
 ## Producto Final :sparkles:
 Puedes ver nuestro proyecto final [aquí](https://carolinafuenzalida.github.io/SCL021-data-lovers/src/index.html) o [aquí](https://jackiiem.github.io/SCL021-data-lovers/src/index.html).
 
